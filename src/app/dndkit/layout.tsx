@@ -17,6 +17,9 @@ export default function DndKitLayout({
           <li>
             <Link href={`/dndkit/simple`}>simple</Link>
           </li>
+          <li>
+            <Link href={`/dndkit/DndBoard`}>DndBoard</Link>
+          </li>
         </ul>
       </div>
       {children}
