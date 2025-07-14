@@ -15,7 +15,7 @@ export default function Input({onSubmit}: {onSubmit: (input: string) => void}) {
         value={input} 
         onChange={(e) => setInput(e.currentTarget.value)} />
         <button 
-        className={`border-none rounded-lg px-4 py-0 bg-[#2563eb] text-white`}
+        className={`border-none rounded-lg px-4 py-0 bg-[#2563eb] text-white cursor-pointer`}
         onClick={handleSubmit}>
             Add
         </button>

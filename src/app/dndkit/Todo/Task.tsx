@@ -17,7 +17,12 @@ export default function Task({id, title}: task) {
         style={style}
         className={`bg-white rounded-sm w-full p-5 flex items-center justify-start gap-5 touch-none`}
       >
-        <input type="checkbox" className={`h-5 w-5`} name="" id="" />
+        <input
+          type="checkbox"
+          className={`h-5 w-5 cursor-pointer`}
+          name=""
+          id=""
+        />
         {title}
       </div>
     );

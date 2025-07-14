@@ -10,9 +10,9 @@ export default function Home() {
           <li className="mb-2 tracking-[-.01em]">
             <Link href={"/FormKitDnD"}>@formkit/drag-and-drop</Link>
           </li>
-          <li className="tracking-[-.01em]">
+          {/* <li className="tracking-[-.01em]">
             <Link href={"/ReactDnD"}>react-dnd</Link>
-          </li>
+          </li> */}
           <li className="tracking-[-.01em]">
             <Link href={"/dndkit"}>dndkit</Link>
           </li>
