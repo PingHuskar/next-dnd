@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import { BoardSquare } from "./BoardSquare";
 import { Piece } from "./Piece";
+import { GameProps } from "./Game";
 
-const boardStyle = {
+const boardStyle: any = {
   width: "100%",
   height: "100%",
   display: "flex",
@@ -17,11 +18,11 @@ const squareStyle = { width: "12.5%", height: "12.5%" };
  * The chessboard component
  * @param props The react props
  */
-export const Board = ({ game }) => {
+export const Board = ({ game }: { game: GameProps }) => {
   const [[knightX, knightY], setKnightPos] = useState(game.knightPosition);
   useEffect(() => game.observe(setKnightPos), []);
 
-  function renderSquare(i) {
+  function renderSquare(i: number) {
     const x = i % 8;
     const y = Math.floor(i / 8);
 

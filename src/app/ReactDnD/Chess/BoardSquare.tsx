@@ -4,8 +4,15 @@ import { useDrop } from "react-dnd";
 import { Overlay, OverlayType } from "./Overlay";
 import Square from "./Square";
 import { ItemTypes } from "./ItemTypes";
+import { GameProps } from "./Game";
 
-export const BoardSquare = ({ x, y, children, game }) => {
+type BoardSquareProps = {
+  x: number;
+  y: number;
+  children: React.ReactNode;
+  game: GameProps;
+};
+export const BoardSquare = ({ x, y, children, game }: BoardSquareProps) => {
   const [{ isOver, canDrop }, drop] = useDrop(
     () => ({
       accept: ItemTypes.KNIGHT,
@@ -22,8 +29,8 @@ export const BoardSquare = ({ x, y, children, game }) => {
 
   return (
     <div
-      ref={drop}
-      role="Space"
+      ref={drop as unknown as React.Ref<HTMLDivElement>} // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // role="Space"
       data-testid={`(${x},${y})`}
       style={{
         position: "relative",

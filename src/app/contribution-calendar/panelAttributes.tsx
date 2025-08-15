@@ -1,0 +1,1 @@
+export default { rx: 6, ry: 6, opacity: 0.1 };

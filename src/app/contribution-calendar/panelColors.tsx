@@ -1,0 +1,1 @@
+export default ["#EEEEEE", "#F78A23", "#F87D09", "#AC5808", "#7B3F06"];

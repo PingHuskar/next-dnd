@@ -104,6 +104,7 @@ export default function KanbanBoard() {
           Log Board State
         </button>
       </div>
+      {JSON.stringify(board, null, 2)}
     </div>
   );
 }

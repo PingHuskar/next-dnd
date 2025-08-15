@@ -1,0 +1,11 @@
+rect {
+    fill: #000;
+    opacity: 1;
+}
+$base-color: #036;
+@for $i from 1 through 9 {
+    rect:nth-child(9n + #{$i}) {
+        fill: lighten($base-color, $i * 5%);
+    }
+}
+

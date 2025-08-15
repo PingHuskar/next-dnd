@@ -1,11 +1,5 @@
-"use client"
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+"use client";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import invariant from "tiny-invariant";
 
@@ -168,8 +162,6 @@ export default function BoardExample() {
        * This means we need to manually restore focus to it.
        */
       entry.actionMenuTrigger.focus();
-
-      return;
     }
   }, [lastOperation, registry]);
 
@@ -335,6 +327,7 @@ export default function BoardExample() {
         canMonitor({ source }) {
           return source.data.instanceId === instanceId;
         },
+        // eslint-disable-next-line
         onDrop(args) {
           const { location, source } = args;
           // didn't drop on anything
@@ -372,6 +365,7 @@ export default function BoardExample() {
           if (source.data.type === "card") {
             const itemId = source.data.itemId;
             invariant(typeof itemId === "string");
+            // eslint-disable-next-line
             // TODO: these lines not needed if item has columnId on it
             const [, startColumnRecord] = location.initial.dropTargets;
             const sourceId = startColumnRecord.data.columnId;
